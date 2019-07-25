@@ -1,8 +1,19 @@
 {
+  "name": "cp_core",
+  "version": "0.0.1",
+  "description": "Commands run as child_process manager",
+  "author": "erguotou525@gmail.com",
   "scripts": {
     "test": "node dist/test.js",
-    "lint": "tslint --project . src/**/*.ts"
+    "lint": "tslint --project . src/**/*.ts",
+    "build": "tsc -p .",
+    "prepublish": "npm run build"
   },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "devDependencies": {
     "@types/node": "^12.6.8",
     "@types/uuid": "^3.4.5",
