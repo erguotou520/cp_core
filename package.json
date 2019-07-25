@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "node dist/test.js",
+    "lint": "tslint --project . src/**/*.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "@types/uuid": "^3.4.5",
+    "tslint": "^5.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "tree-kill": "^1.2.1",
+    "uuid": "^3.3.2"
+  }
+}
