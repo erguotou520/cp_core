@@ -47,7 +47,11 @@ export function guessFromCommandString (commands: string): [number, number] {
       args.push({ key: rest[i] })
       i++
     }
-    const service = new CPService(command, args)
+    let serviceName: string | undefined = command.split(/\\|\//).pop()
+    if (!serviceName) {
+      serviceName = command
+    }
+    const service = new CPService(serviceName, command, args)
     const services = ServiceManager.getServices()
     const foundService = services.find(serv => serv.isEqual(service))
     const config = Object.keys(configs).length ? new CPConfig('', configs) : null

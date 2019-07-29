@@ -52,7 +52,11 @@ function guessFromCommandString(commands) {
             args.push({ key: rest[i] });
             i++;
         }
-        var service = new Service_1.default(command, args);
+        var serviceName = command.split(/\\|\//).pop();
+        if (!serviceName) {
+            serviceName = command;
+        }
+        var service = new Service_1.default(serviceName, command, args);
         var services = ServiceManager_1.default.getServices();
         var foundService = services.find(function (serv) { return serv.isEqual(service); });
         var config = Object.keys(configs).length ? new Config_1.default('', configs) : null;

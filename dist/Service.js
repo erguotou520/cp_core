@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var uuid_1 = require("uuid");
 var CPService = /** @class */ (function () {
-    function CPService(command, args) {
+    function CPService(name, command, args) {
+        this.name = name;
         this.uuid = uuid_1.v4();
         this.command = command;
         this.args = args;
@@ -14,7 +15,7 @@ var CPService = /** @class */ (function () {
     };
     // 是否有效
     CPService.prototype.isValid = function () {
-        return !!(this.uuid && this.command);
+        return !!this.command;
     };
     // 转json
     CPService.toJSON = function (service) {

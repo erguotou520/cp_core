@@ -12,9 +12,10 @@ export interface CPServiceArg {
 }
 export default class CPService {
     uuid: string;
+    name: string;
     command: string;
     args: CPServiceArg[];
-    constructor(command: string, args: CPServiceArg[]);
+    constructor(name: string, command: string, args: CPServiceArg[]);
     isEqual(another: CPService): boolean;
     isValid(): boolean;
     static toJSON(service: CPService): object;

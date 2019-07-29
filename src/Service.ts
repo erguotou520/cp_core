@@ -16,10 +16,12 @@ export interface CPServiceArg {
 
 export default class CPService {
   uuid: string
+  name: string
   command: string
   args: CPServiceArg[]
 
-  constructor (command: string, args: CPServiceArg[]) {
+  constructor (name: string, command: string, args: CPServiceArg[]) {
+    this.name = name
     this.uuid = uuid()
     this.command = command
     this.args = args
@@ -32,7 +34,7 @@ export default class CPService {
   }
   // 是否有效
   isValid (): boolean {
-    return !!(this.uuid && this.command)
+    return !!this.command
   }
   // 转json
   static toJSON (service: CPService): object {
