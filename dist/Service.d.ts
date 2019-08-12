@@ -1,4 +1,5 @@
 export interface CPServiceArgValue {
+    required?: boolean;
     origin: 'input' | 'select';
     type: 'string' | 'number';
     min?: number;

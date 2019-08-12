@@ -1,6 +1,6 @@
 {
   "name": "cp_core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Commands run as child_process manager",
   "author": "erguotou525@gmail.com",
   "main": "dist/index.js",
@@ -13,9 +13,15 @@
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
+  },
   "devDependencies": {
     "@types/node": "^12.6.8",
     "@types/uuid": "^3.4.5",
+    "husky": "^3.0.3",
     "tslint": "^5.18.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.5.3"

@@ -1,6 +1,7 @@
 import { v4 as uuid } from 'uuid'
 
 export interface CPServiceArgValue {
+  required?: boolean
   origin: 'input' | 'select'
   type: 'string' | 'number'
   min?: number

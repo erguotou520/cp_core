@@ -2,5 +2,6 @@ files
 node_modules
 test.ts
 test.js
+test.d.ts
 *.js.map
 yarn-error.log
