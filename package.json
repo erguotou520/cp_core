@@ -1,6 +1,6 @@
 {
   "name": "cp_core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Commands run as child_process manager",
   "author": "erguotou525@gmail.com",
   "main": "dist/index.js",

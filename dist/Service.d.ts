@@ -9,7 +9,7 @@ export interface CPServiceArgValue {
 }
 export interface CPServiceArg {
     key: string;
-    value?: CPServiceArgValue;
+    value?: CPServiceArgValue | null;
 }
 export default class CPService {
     uuid: string;
