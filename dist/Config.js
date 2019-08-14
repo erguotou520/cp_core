@@ -17,7 +17,7 @@ var CPConfig = /** @class */ (function () {
     };
     // 是否有效
     CPConfig.prototype.isValid = function () {
-        return !!(this.uuid && this.name && Object.keys(this.configs).length);
+        return !!(this.uuid && this.name);
     };
     // 转json
     CPConfig.toJSON = function (config) {

@@ -21,7 +21,7 @@ export default class CPConfig {
   }
   // 是否有效
   isValid (): boolean {
-    return !!(this.uuid && this.name && Object.keys(this.configs).length)
+    return !!(this.uuid && this.name)
   }
   // 转json
   static toJSON (config: CPConfig): object {
